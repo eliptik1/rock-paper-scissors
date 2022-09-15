@@ -4,7 +4,7 @@ function getComputerChoice() {
     return randomMove;
 }
 
-const playerSelection = "ROck";
+const playerSelection = "PAPER";
 const computerSelection = getComputerChoice();
 
 console.log("player: "+ playerSelection.toLowerCase())
@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection){
     return result ="lost";
     } else if(playerSelection.toLowerCase() === "paper" && computerSelection === "paper"){
      console.log("Draw")
-     return result = draw;
+     return result = "draw";
     } else if(playerSelection.toLowerCase() === "paper" && computerSelection === "rock"){
      console.log("You won! Paper beats rock.")
      return result = "win";
@@ -45,4 +45,4 @@ function playRound(playerSelection, computerSelection){
 
 let result;
 
-playRound(playerSelection, computerSelection);
+console.log(playRound(playerSelection, computerSelection));
