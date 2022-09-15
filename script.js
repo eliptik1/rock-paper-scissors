@@ -33,7 +33,7 @@ function game(){
         score += 1;
     
         } else if(playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors"){
-        score.log("Draw")
+        console.log("Draw")
         
         } else if(playerSelection.toLowerCase() === "scissors" && computerSelection === "paper"){
          console.log("You win! Scissors beats paper.")
