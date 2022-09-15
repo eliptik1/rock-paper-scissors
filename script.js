@@ -5,7 +5,7 @@ function game(){
         return randomMove;
     }
     
-    const playerSelection = "rock";
+    const playerSelection = prompt();
     const computerSelection = getComputerChoice();
     
     console.log("player: "+ playerSelection.toLowerCase())
