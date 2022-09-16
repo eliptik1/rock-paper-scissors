@@ -58,17 +58,17 @@ function game(){
 let score = 0;
 let draw = 0;
 let lose = 0;
-for(let i = 0; i<5; i++){
+let gameFinished = false;
+do{
     game();
+    if (score === 5){
+        gameFinished = true;
+        console.log("Congratulations! You won the game!")
+        console.log("win:", score, " lose:", lose, " draw:", draw)
+    } else if(lose === 5){
+        gameFinished = true;
+        console.log("You lost the game :(")
+        console.log("win:", score, " lose:", lose, " draw:", draw)
+    }
 }
-if (score > lose){
-    console.log("Congratulations! You won the game!")
-    console.log("win:", score, " lose:", lose, " draw:", draw)
-} else if(score === lose ) {
-    console.log("The game ended in a draw...")
-    console.log("win:", score, " lose:", lose, " draw:", draw)
-}
-    else {
-    console.log("You lost the game :(")
-    console.log("win:", score, " lose:", lose, " draw:", draw)
-}
+while (gameFinished === false);
