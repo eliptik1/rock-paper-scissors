@@ -1,7 +1,7 @@
-  let score = 0;
-  let draw = 0;
-  let lose = 0;
-  let result = " ";
+    let score = 0;
+    let draw = 0;
+    let lose = 0;
+    let result = " ";
 
      const playerScore = document.querySelector("#playerScore")
      const computerScore = document.querySelector("#computerScore")
