@@ -8,32 +8,34 @@
      const gameResult = document.querySelector("#gameResult")
      const playerMove = document.querySelector("#playerMove")
      const computerMove = document.querySelector("#computerMove")
-     playerScore.textContent = `Player score: ${score}`
-     computerScore.textContent = `Computer score: ${lose}`
+     playerScore.textContent = `${score}`
+     computerScore.textContent = `${lose}`
      gameResult.textContent = `${result}`
      
 
     
     const playRock = function(){
         playRound1("rock")
-        playerMove.textContent = "You chose rock"
+        playerMove.innerHTML =  `<img id="rock1" src="./images/rock.png" alt="rock">`
+
     }
 
     const playPaper = function(){
         playRound1("paper")
-        playerMove.textContent = "You chose paper"
+        playerMove.innerHTML = `<img id="paper1" src="./images/paper.png" alt="paper">`
+
     }
 
     const playScissors = function(){
         playRound1("scissors")
-        playerMove.textContent = "You chose scissors"
+        playerMove.innerHTML = `<img id="scissors1" src="./images/scissors.png" alt="scissors">`
     }
     
     
     function getComputerChoice() {
         const moves = ["rock", "paper", "scissors"]
         let randomMove = moves[Math.floor(Math.random() * moves.length)];
-        computerMove.textContent = `Computer chose ${randomMove}`;
+        computerMove.innerHTML = `<img id="${randomMove}1" src="./images/${randomMove}.png" alt="${randomMove}">`;
         return randomMove;
     }   
 
@@ -53,11 +55,11 @@
         score = 0;
         draw = 0;
         lose = 0;
-        playerScore.textContent = `Player score: ${score}`
-        computerScore.textContent = `Computer score: ${lose}`
+        playerScore.textContent = `${score}`
+        computerScore.textContent = `${lose}`
         gameResult.textContent = " "
-        playerMove.textContent = "Player"
-        computerMove.textContent = "Computer"
+        playerMove.innerHTML = `<img id="question" src="./images/question.png" alt="question">`
+        computerMove.innerHTML = `<img id="question" src="./images/question.png" alt="question">`
         rockBtn.addEventListener("click", playRock)
         paperBtn.addEventListener("click", playPaper)
         scissorsBtn.addEventListener("click", playScissors)
@@ -121,8 +123,8 @@
     }
     
     function updateResults(){
-        playerScore.textContent = `Player score: ${score}`
-        computerScore.textContent = `Computer score: ${lose}`
+        playerScore.textContent = `${score}`
+        computerScore.textContent = `${lose}`
         gameResult.textContent = `${result}`
 
         if (score === 5){

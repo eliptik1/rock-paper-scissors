@@ -24,7 +24,7 @@ body {
     gap: 20px;
     margin: 20px 0 20px 0;
 }
-#playerMove, #computerMove, #moveTitle1, #moveTitle2, #scoreTitle1, #scoreTitle2 {
+#playerMove, #computerMove, #moveTitle1, #moveTitle2, #scoreTitle1, #scoreTitle2, #playerScore, #computerScore {
     display: flex;
     justify-content: center;
 }
@@ -44,6 +44,10 @@ img {
     border-radius: 15%;
     background-color: crimson;
     width: 180px;
+}
+#rock1, #paper1, #scissors1, #question {
+    width: 100px;
+    background-color: rgb(255, 171, 119);
 }
 
 img:hover {
