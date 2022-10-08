@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,40 @@
 </head>
 <body>
     <script src="script.js" defer></script>
-
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <button id="restart">Restart</button>
-
+   
+    <div id="buttons">
+        <img id="rock" src="./images/rock.png" alt="rock">
+        <img id="paper" src="./images/paper.png" alt="paper">
+        <img id="scissors" src="./images/scissors.png" alt="scissors">   
+    </div>
+  
+    
     <div id="container">
-
-        <div id="moves">
-            <div id="playerMove">Player</div>
-            <div id="computerMove">Computer</div>
+        <button id="restart">Restart</button>
+        <div id="moves">  
+                <div id="move1">
+                    <div id="moveTitle1">PLAYER MOVE:</div> 
+                    <div id="playerMove">Player</div>
+                </div>
+               
+                <div id="move2">
+                    <div id="moveTitle2">COMPUTER MOVE:</div>
+                    <div id="computerMove">Computer</div>
+                </div> 
         </div>
-        <div id="playerScore">score</div>
-        <div id="computerScore">score</div>
-        <br>
+
+        <div id=scores> 
+            <div id="scoreContainer1">
+                <div id="scoreTitle1">Player Sc:</div> 
+                <div id="playerScore">score</div>
+            </div>
+
+            <div id="scoreContainer2">
+                <div id="scoreTitle2">Comp Score:</div>
+                <div id="computerScore">score</div>
+            </div>
+        </div>
+       
         <div id="gameResult">result</div>
 
     </div>

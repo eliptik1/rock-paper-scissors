@@ -56,13 +56,11 @@
         playerScore.textContent = `Player score: ${score}`
         computerScore.textContent = `Computer score: ${lose}`
         gameResult.textContent = " "
-        playerMove.textContent = " "
-        computerMove.textContent = " "
+        playerMove.textContent = "Player"
+        computerMove.textContent = "Computer"
         rockBtn.addEventListener("click", playRock)
         paperBtn.addEventListener("click", playPaper)
         scissorsBtn.addEventListener("click", playScissors)
-
-
     }
     
     function removeEvent(){
@@ -126,8 +124,6 @@
         playerScore.textContent = `Player score: ${score}`
         computerScore.textContent = `Computer score: ${lose}`
         gameResult.textContent = `${result}`
-
-
 
         if (score === 5){
             gameResult.textContent = "Congratulations! You win the game!"
