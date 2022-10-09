@@ -1,20 +1,34 @@
 * {
+    color: white;
     font-family: 'Jua', cursive;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
     margin: 0;
-    border: 1px solid black;
+    
+}
+
+#restart {
+    background-color: rgb(255, 171, 119);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    margin-top: 30px;
+    color: black;
+}
+
+#headerContainer {
+    background-color: rgb(24, 16, 35);
 }
 
 #header{
+    color: #eaf6ff;
     font-family: 'Jua', cursive;
     font-weight: 500;
-    font-size: 60px;
+    font-size: 70px;
     margin: 30px 0 30px 0;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(62, 50, 81);
 }
 
 #buttons{
@@ -31,37 +45,72 @@ body {
 }
 
 #moves {
+    background-color: rgb(50, 36, 62);
+    padding: 30px;
+    
+    border-radius: 50px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin: 20px 0 20px 0;
 }
+
+#move1, #move2 {
+    width: 200px;
+}
+
 #headerContainer, #playerMove, #computerMove, #moveTitle1, #moveTitle2, #scoreTitle1, #scoreTitle2, #playerScore, #computerScore {
     display: flex;
     justify-content: center;
 }
 
 #scores {
+    
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+}
+
+#scoreContainer1, #scoreContainer2{
+    width: 200px;
+    background-color: rgb(50, 36, 62);
+    border-radius: 30px;
+    padding: 15px;
 }
 
 #gameResult {
     margin-top: 20px;
 }
 
-img {
-    border: none;
-    border-radius: 15%;
-    background-color: crimson;
-    width: 180px;
-}
 #rock1, #paper1, #scissors1, #question {
     width: 100px;
-    background-color: rgb(255, 171, 119);
+    padding: 5px;
+    background: rgb(255, 171, 119);
+    border-radius: 15%;
 }
 
-img:hover {
-    background-color: rgba(220, 20, 60, 0.399);
+#moveTitle1, #moveTitle2 {
+    margin-bottom: 10px;
+}
+
+@property --c {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: crimson;
+  }
+
+#rock, #paper, #scissors {
+    border: 3px solid white;
+    border-radius: 15%;
+    width: 180px;
+    background: radial-gradient(var(--c), crimson);
+    transition: --c 0.3s;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+    --c: #ffeaea;
+}
+
+#rock:active, #paper:active , #scissors:active{
+    scale: 0.95;
 }
