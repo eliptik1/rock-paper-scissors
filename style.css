@@ -4,15 +4,22 @@
     font-size: 25px;
     font-weight: 300;
     margin: 0;
-    
 }
 
 #restart {
-    background-color: rgb(255, 171, 119);
-    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(226, 92, 9);
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 12px;
     margin-top: 30px;
-    color: black;
+    color: rgb(255, 255, 255);
+}
+#restart:hover {
+    cursor: pointer;
+    background-color: rgb(195, 131, 195);
+    border: 3px solid rgb(244, 209, 255);
+    border-radius: 12px;
+    margin-top: 30px;
+    color: rgb(72, 33, 156);
 }
 
 #headerContainer {
@@ -46,8 +53,7 @@ body {
 
 #moves {
     background-color: rgb(50, 36, 62);
-    padding: 30px;
-    
+    padding: 30px; 
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -65,28 +71,33 @@ body {
 }
 
 #scores {
-    
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-#scoreContainer1, #scoreContainer2{
+.scoreContainer1, .scoreContainer2{
     width: 200px;
     background-color: rgb(50, 36, 62);
     border-radius: 30px;
     padding: 15px;
+    transition: all .3s;
 }
 
-#gameResult {
+#gameResult, #gameResult2 {
     margin-top: 20px;
 }
 
-#rock1, #paper1, #scissors1, #question {
+#gameResult2 {
+    font-size: 30px;
+}
+
+.question {
     width: 100px;
     padding: 5px;
     background: rgb(255, 171, 119);
     border-radius: 15%;
+    transition: all .3s;
 }
 
 #moveTitle1, #moveTitle2 {
@@ -114,3 +125,25 @@ body {
 #rock:active, #paper:active , #scissors:active{
     scale: 0.95;
 }
+
+.win {
+    background: rgb(1, 161, 1);
+    animation-name: example;
+    animation-duration: 0.3s;
+    
+}
+.win1 {
+    color: rgb(1, 161, 1);
+}
+
+.clicked {
+    background: rgb(255, 201, 38);
+    animation-name: example;
+    animation-duration: 0.3s;
+}
+
+@keyframes example {
+    0% {scale: 1}
+    50% {scale: 0.95}
+    100% {scale: 1}
+  }
