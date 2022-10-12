@@ -23,7 +23,7 @@
 }
 
 #headerContainer {
-    background-color: rgb(24, 16, 35);
+    background-color: rgb(34, 24, 47);
 }
 
 #header{
@@ -149,3 +149,26 @@ body {
     50% {scale: 0.95}
     100% {scale: 1}
   }
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.spacer {
+    flex: 1; 
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgb(47, 24, 43);
+}
+
+.footer > p {
+    font-size: 19px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
